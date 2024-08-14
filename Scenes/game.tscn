@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyfa3ryl1smyh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_751c2"]
+
+[node name="Game" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_751c2")
+one_way_collision_margin = 0.0
+debug_color = Color(0, 0.964706, 0.207843, 0.419608)

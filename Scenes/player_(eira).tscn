@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bbnkre8fqlvx2"]
+
+[node name="Player (Eira)" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

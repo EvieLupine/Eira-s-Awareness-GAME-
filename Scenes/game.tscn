@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyfa3ryl1smyh"]
+[gd_scene load_steps=8 format=3 uid="uid://dyfa3ryl1smyh"]
 
 [ext_resource type="Texture2D" uid="uid://batgujrpwf4wt" path="res://Assests/sprites/world_tileset.png" id="1_kiqai"]
+[ext_resource type="Texture2D" uid="uid://cu63mbtfkqblg" path="res://Assests/sprites/grass.jpeg" id="2_e0dt4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_751c2"]
 normal = Vector2(0, -2)
@@ -135,9 +136,22 @@ texture = ExtResource("1_kiqai")
 2:15/0 = 0
 3:15/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wdorj"]
+texture = ExtResource("2_e0dt4")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mavdv"]
+texture = ExtResource("2_e0dt4")
+texture_region_size = Vector2i(1, 1)
+0:0/size_in_atlas = Vector2i(17, 11)
+0:0/0 = 0
+20:78/0 = 0
+0:148/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_cx4s3"]
 resource_local_to_scene = true
 sources/0 = SubResource("TileSetAtlasSource_koj33")
+sources/1 = SubResource("TileSetAtlasSource_wdorj")
+sources/2 = SubResource("TileSetAtlasSource_mavdv")
 
 [node name="Game" type="Node2D"]
 
@@ -158,3 +172,4 @@ debug_color = Color(0, 0.964706, 0.207843, 0.419608)
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_cx4s3")
 format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 19, 0, 0, -65517, 458752, 6, -65524, 196608, 8, -65525, 131072, 5, -65523, 262144, 5, -131060, 196608, 7, -196596, 196608, 6, -262132, 196608, 5, -262131, 262144, 5, -196595, 262144, 5, -196597, 131072, 5, -327668, 65536, 5, 18, 0, 0, -65519, 0, 0)

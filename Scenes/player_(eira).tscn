@@ -1,6 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://bbnkre8fqlvx2"]
+[gd_scene load_steps=35 format=3 uid="uid://bbnkre8fqlvx2"]
 
 [ext_resource type="Texture2D" uid="uid://dctu7beyfaxw0" path="res://Assests/sprites/Idle.png" id="1_lwlae"]
+[ext_resource type="Script" path="res://Assests/script/player_(eira).gd" id="1_n0yas"]
 [ext_resource type="Texture2D" uid="uid://dg0ltylqbbmty" path="res://Assests/sprites/Run.png" id="2_57wap"]
 [ext_resource type="Texture2D" uid="uid://djxts2ffa5gt7" path="res://Assests/sprites/Walk.png" id="3_g45dr"]
 
@@ -222,6 +223,9 @@ animations = [{
 size = Vector2(80, 64)
 
 [node name="Player (Eira)" type="CharacterBody2D"]
+top_level = true
+scale = Vector2(10, 10)
+script = ExtResource("1_n0yas")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(16, -64)

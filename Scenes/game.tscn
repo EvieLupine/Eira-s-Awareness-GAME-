@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dyfa3ryl1smyh"]
+[gd_scene load_steps=44 format=3 uid="uid://dyfa3ryl1smyh"]
 
 [ext_resource type="PackedScene" uid="uid://bbnkre8fqlvx2" path="res://Scenes/player_(eira).tscn" id="1_nddr2"]
 [ext_resource type="Texture2D" uid="uid://d2s0glbw1m8lp" path="res://Assests/basic tree.png" id="2_xt4ao"]
@@ -129,12 +129,20 @@ sources/44 = SubResource("TileSetAtlasSource_uqnl2")
 sources/45 = SubResource("TileSetAtlasSource_op36p")
 sources/47 = SubResource("TileSetAtlasSource_02qnf")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wdqj7"]
+texture = ExtResource("3_m4uqa")
+margins = Vector2i(65, 46)
+texture_region_size = Vector2i(360, 360)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_rmc7j"]
 tile_size = Vector2i(800, 800)
+sources/1 = SubResource("TileSetAtlasSource_wdqj7")
 
 [node name="Game" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.1, 0.1)
 
 [node name="Player (Eira)" parent="." instance=ExtResource("1_nddr2")]
 position = Vector2(19, 1)
@@ -158,4 +166,49 @@ layer_1/tile_data = PackedInt32Array()
 [node name="cool" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_rmc7j")
 format = 2
+layer_0/tile_data = PackedInt32Array(-65534, 1, 0, -65535, 1, 0, -65536, 1, 0, 1, 1, 0, 2, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, -65530, 1, 0, -65529, 1, 0, -65528, 1, 0, -65527, 1, 0, -65526, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, -131070, 1, 0, -131069, 1, 0, -131068, 1, 0, -131067, 1, 0, -131066, 1, 0, -131065, 1, 0, -131064, 1, 0, -131063, 1, 0, 65545, 1, 0, 65544, 1, 0, 65543, 1, 0, 65542, 1, 0, 65541, 1, 0, 65540, 1, 0, 65539, 1, 0, 65538, 1, 0, 65537, 1, 0, 65536, 1, 0, 131071, 1, 0, 131070, 1, 0, -196608, 1, 0, -131073, 1, 0, -131074, 1, 0, -131075, 1, 0, -131076, 1, 0, -131077, 1, 0, -65541, 1, 0, -65542, 1, 0, -6, 1, 0, 65530, 1, 0, 65532, 1, 0, 65531, 1, 0, 131067, 1, 0, 131068, 1, 0, 131069, 1, 0, 196607, 1, 0, 196606, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, -196606, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -262139, 1, 0, -196603, 1, 0, -196604, 1, 0, -196605, 1, 0, 196612, 1, 0, 196613, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, -262143, 1, 0, -262144, 1, 0, -196609, 1, 0, -196610, 1, 0, -262145, 1, 0, -327681, 1, 0, -393218, 1, 0, -393219, 1, 0, -393220, 1, 0, -393221, 1, 0, -327686, 1, 0, -262151, 1, 0, -196615, 1, 0, -131080, 1, 0, -65544, 1, 0, -8, 1, 0, 65528, 1, 0, 131064, 1, 0, 196601, 1, 0, -262148, 1, 0, -262147, 1, 0, -327682, 1, 0, -393216, 1, 0, -458751, 1, 0, -393215, 1, 0, -327679, 1, 0, -65537, 1, 0, -1, 1, 0, -131072, 1, 0, -131071, 1, 0, -262138, 1, 0, -262137, 1, 0, -262136, 1, 0, -196600, 1, 0, 131081, 1, 0)
 layer_1/tile_data = PackedInt32Array(-65534, 47, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="cool"]
+
+[node name="PineTree" type="Sprite2D" parent="."]
+position = Vector2(1886, -1385)
+scale = Vector2(3.681, 3.964)
+texture = ExtResource("15_buf4j")
+
+[node name="PineTree2" type="Sprite2D" parent="."]
+position = Vector2(2895, -1442)
+scale = Vector2(5.1, 4.796)
+texture = ExtResource("15_buf4j")
+
+[node name="BasicTree" type="Sprite2D" parent="."]
+modulate = Color(0.972549, 0.929412, 0.890196, 1)
+texture_filter = 1
+position = Vector2(1235, -873)
+scale = Vector2(3.74625, 4.08)
+texture = ExtResource("2_xt4ao")
+
+[node name="BasicTree" type="Sprite2D" parent="BasicTree"]
+modulate = Color(0.972549, 0.929412, 0.890196, 1)
+texture_filter = 1
+position = Vector2(264.264, -7.35294)
+scale = Vector2(0.763056, 0.990588)
+texture = ExtResource("2_xt4ao")
+
+[node name="BasicTree2" type="Sprite2D" parent="."]
+modulate = Color(0.972549, 0.929412, 0.890196, 1)
+texture_filter = 1
+position = Vector2(1553, -551)
+scale = Vector2(1.81973, 2.26743)
+texture = ExtResource("2_xt4ao")
+
+[node name="PineTree3" type="Sprite2D" parent="."]
+modulate = Color(0.74902, 0.623529, 0.74902, 1)
+position = Vector2(3406, -965)
+scale = Vector2(3.122, 3.15)
+texture = ExtResource("15_buf4j")
+
+[node name="PineTree4" type="Sprite2D" parent="."]
+position = Vector2(3982, -1207)
+scale = Vector2(2.356, 2.492)
+texture = ExtResource("15_buf4j")
